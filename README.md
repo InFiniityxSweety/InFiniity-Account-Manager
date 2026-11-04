@@ -1,10 +1,15 @@
 # InFiniity Account Manager
 
-InFiniity Account Manager is an independent client-side Premium account-management mod for **Minecraft: Java Edition 26.2**, **Fabric** and **Java 25** on Windows. Development build **1.0.4-dev.2** is intended to manage the user's own licensed Microsoft/Minecraft Java profiles within an existing Minecraft installation, including CurseForge. The earlier combined Premium/offline implementation is retained separately as described below.
+**NOT AN OFFICIAL MINECRAFT PRODUCT.**  
+**NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.**
+
+InFiniity Account Manager is an independent client-side Premium account-management mod for **Minecraft: Java Edition 26.2**, **Fabric** and **Java 25** on Windows. Development build **1.0.4-dev.3** is intended to manage the user's own licensed Microsoft/Minecraft Java profiles within an existing Minecraft installation, including CurseForge. The earlier combined Premium/offline implementation is retained separately as described below.
 
 **Status — November 4, 2026:** The original AppID application was declined without a stated reason. An owner-performed real attempt on development build 1.0.4-dev.1 reached `/authentication/login_with_xbox` and failed with HTTP 403, `Invalid app registration`, identified through the specific safe error path. No revised application has been submitted or approved. Completed Minecraft authentication, real Premium switching, renewal, online-mode joins and CurseForge runtime acceptance remain unverified; service access blocks the Premium acceptance steps.
 
 This public repository contains project, privacy and security documentation for the Minecraft AppID review. The implementation remains private. This repository contains no mod binaries, source archives, Minecraft files or account data.
+
+Compared with dev.2, dev.3 adds the two-line independence notice in the existing account-information area. The accepted account list, switch glyph, player heads and Vanilla button positions remain unchanged. Authentication and account-management behavior are unchanged; development diagnostics were extended to verify the notice and actual GUI scale.
 
 ## Microsoft-authenticated profiles
 
@@ -34,13 +39,25 @@ A separate offline-profile addon is a disclosed future possibility, not an imple
 
 ## What has been tested
 
-For **1.0.4-dev.2**:
+For **1.0.4-dev.3**:
+
+- Clean build: **99 Java tests passed**, with no failures, errors or skipped tests.
+- The same packaged JAR passed **23 isolated Minecraft-client checks on each of Fabric Loader 0.19.3 and 0.20.1**. These include the existing UI/data-preservation/activation guards, the complete notice with no control overlap, and music volume at 0 %. Actual framebuffer size and effective GUI scale were checked at 640×480/1, 854×480/2, 1280×720/3 and 1920×1080/4.
+- These checks use synthetic account records and do not demonstrate a successful authorized Premium session commit, real renewal, online-mode join or CurseForge launch. No new personal Microsoft sign-in was performed.
+
+Earlier evidence for **1.0.4-dev.2**:
 
 - Clean build: **99 Java tests passed**, covering simulated authentication, real local callbacks, state/PKCE, entitlement/profile failures, token rotation, persistence/recovery, concurrent access and the generic rollback kernel. Synthetic-data tests cover at least 30 account records.
 - Real Minecraft 26.2 client: **18 isolated checks passed on each of Fabric Loader 0.19.3 and 0.20.1**, covering UI, four GUI/window combinations, data preservation and rejection of forbidden activation paths. They do not exercise a successful authorized Premium session commit or online-mode join.
 - The real owner-performed attempt was on **1.0.4-dev.1**, before dev.2's music-startup and error-wording adjustments. It stopped at the Minecraft Services app-registration rejection described above. No raw credential-bearing HTTP log is published here.
 
 Successful real Minecraft sign-in, entitlement/profile acceptance, two-Premium-account switching, renewal, restart persistence of authorized Premium sessions and online-mode joins remain blocked or unverified. Actual CurseForge runtime acceptance is also open; a direct isolated Minecraft launch is not evidence of a CurseForge launch. The existing launcher session is not treated as a source of refresh credentials or indefinitely renewable authorization. No documented CurseForge Minecraft-account broker was found in the public interfaces examined.
+
+## Maintainer and support
+
+Maintained by **InFiniityxSweety**. For general questions, bug reports and feature requests, please use this repository's [GitHub Issues](https://github.com/InFiniityxSweety/InFiniity-Account-Manager/issues).
+
+GitHub Issues are public. Do not include passwords, authentication codes, access or refresh tokens, account files, or personal information. Do not post vulnerability details or sensitive evidence in public issues; see [Security](SECURITY.md) for the current reporting status. No response time or support guarantee is promised.
 
 ## Project information
 

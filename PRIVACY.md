@@ -2,7 +2,9 @@
 
 Last updated: November 4, 2026.
 
-This notice describes the private Premium main mod, development build 1.0.4-dev.2. The original AppID application was declined without a stated reason; a real attempt on dev.1 failed at Minecraft Services with Invalid app registration. No revised approval or completed Premium acceptance is claimed. This repository provides documentation only and operates no account service.
+InFiniity Account Manager is an independent, unofficial project maintained by InFiniityxSweety. It is not approved by or associated with Mojang or Microsoft.
+
+This notice describes the private Premium main mod, development build 1.0.4-dev.3. The original AppID application was declined without a stated reason; a real attempt on dev.1 failed at Minecraft Services with Invalid app registration. No revised approval or completed Premium acceptance is claimed. This repository provides documentation only and operates no account service.
 
 ## Information used by the mod
 
@@ -32,4 +34,4 @@ Local backups, user-created copies, operating-system backups and caches may reta
 
 Only documentation and an exclusion policy are intended for this repository. Do not post passwords, tokens, account files, private configuration or identifiable logs in issues or discussions. GitHub processes visits, account information and contributions under its own [privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
 
-For privacy questions, use the maintainer contact options shown on the repository owner's GitHub profile. If no private contact route is available, post only a general request for contact without personal data. Never send credentials.
+For general, non-confidential questions about this notice, contact **InFiniityxSweety** through this repository's [GitHub Issues](https://github.com/InFiniityxSweety/InFiniity-Account-Manager/issues). Issues are public: use a general description without personal information or account details. No general private privacy-support channel is currently documented. GitHub Private Vulnerability Reporting is enabled for security vulnerabilities as described in [Security](SECURITY.md); it is not a general private messaging or privacy-support channel. Never send passwords, authentication codes, access or refresh tokens, or complete account files through any reporting route.

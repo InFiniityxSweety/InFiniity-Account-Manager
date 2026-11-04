@@ -2,7 +2,9 @@
 
 ## Current status
 
-The Premium main mod remains development build 1.0.4-dev.2. The original AppID application was declined without a stated reason. A real owner-performed dev.1 attempt failed at Minecraft Services login_with_xbox with HTTP 403 / Invalid app registration. No revised approval, completed Premium acceptance, production-ready release or independent security audit is claimed. This repository distributes documentation only.
+InFiniity Account Manager is an independent, unofficial project maintained by InFiniityxSweety. It is not approved by or associated with Mojang or Microsoft.
+
+The Premium main mod is development build 1.0.4-dev.3. This build adds the independence notice in the existing account-information area, checked in isolated clients; authentication and account-management behavior are unchanged from dev.2. The original AppID application was declined without a stated reason. A real owner-performed dev.1 attempt failed at Minecraft Services login_with_xbox with HTTP 403 / Invalid app registration. No revised approval, completed Premium acceptance, production-ready release or independent security audit is claimed. This repository distributes documentation only.
 
 ## Authentication and session safeguards
 
@@ -18,11 +20,13 @@ These safeguards are implementation details, not a guarantee against all attacks
 
 ## Reporting a suspected vulnerability
 
-Do not publish tokens, passwords, account files, backups, identifying logs or an exploitable vulnerability in a public issue.
+Do not post vulnerabilities, exploit details, sensitive evidence, identifying logs, account files or backups in public issues.
 
-If this repository offers GitHub private vulnerability reporting, use **Security > Report a vulnerability**. Otherwise, use a private contact route explicitly published by the repository owner on their GitHub profile. If none is available, open an issue asking for a private reporting channel with only a general description, such as "security contact requested". Do not include exploit details or personal data until a private route is established.
+**GitHub Private Vulnerability Reporting is enabled, verified on November 4, 2026.** For security vulnerabilities, use [Report a vulnerability](https://github.com/InFiniityxSweety/InFiniity-Account-Manager/security/advisories/new), available under **Security and quality > Advisories > Report a vulnerability**. GitHub sign-in is required. The enabled API status and the actual reporting link on the public Advisories page were checked; no test report was submitted.
 
-A useful private report describes the affected development build, expected and actual behavior, and minimal reproduction steps using synthetic accounts or redacted examples. Never include live access tokens or refresh tokens. No response-time or bounty commitment is made.
+General questions, bug reports and feature requests belong in [GitHub Issues](https://github.com/InFiniityxSweety/InFiniity-Account-Manager/issues). Issues are public: do not include vulnerabilities, exploit details, personal information or sensitive evidence. Private vulnerability reporting is for security vulnerabilities, not general support, private messaging or privacy requests.
+
+A useful private report describes the affected development build, expected and actual behavior, and minimal reproduction steps using synthetic accounts or redacted examples. Never send passwords, authentication codes, access or refresh tokens, or complete account files, even through a private route. No response-time, support or bounty commitment is made.
 
 ## Public repository boundary
 
