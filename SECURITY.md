@@ -2,16 +2,17 @@
 
 ## Current status
 
-InFiniity Account Manager is in private development. Minecraft AppID approval and real Microsoft/Premium end-to-end acceptance are pending. No production-ready Premium release or security audit is claimed. This repository distributes documentation only.
+The Premium main mod remains development build 1.0.4-dev.2. The original AppID application was declined without a stated reason. A real owner-performed dev.1 attempt failed at Minecraft Services login_with_xbox with HTTP 403 / Invalid app registration. No revised approval, completed Premium acceptance, production-ready release or independent security audit is claimed. This repository distributes documentation only.
 
 ## Authentication and session safeguards
 
 - Publisher-owned public Microsoft application; no embedded client secret or third-party launcher application ID.
 - Official system-browser authorization, PKCE/S256, state validation, loopback callback validation and single-use callback handling.
-- Xbox/XSTS and Minecraft Services token exchange, authenticated entitlement checks and Minecraft profile retrieval before saving a Microsoft profile.
+- Implemented Xbox/XSTS and Minecraft Services exchange, recognized Java-entitlement checks and authenticated profile validation before saving or activating a Microsoft profile; real post-login acceptance is blocked by service access.
 - Windows DPAPI protection for persisted refresh and Minecraft access tokens, including backup copies. Profile metadata is not encrypted by this mechanism.
-- Persisted refresh-token rotation, bounded retries for applicable temporary service failures, and reauthentication when authorization is revoked.
-- Disconnected-session switching guards and rollback handling. Offline profiles cannot provide Microsoft/Minecraft authentication or bypass an online-mode server.
+- Issuer-bound refresh tokens, rotation checkpoints, process coordination and bounded retries; ambiguous refresh POSTs are not blindly replayed. Classified permanent application or reauthentication errors pause automatic attempts in the running client.
+- Disconnected-session guards, off-thread preparation, internal one-use activation permits and client-thread commit/rollback handling. Unverified snapshots and direct apply calls cannot activate a session through the mod's normal integration paths. Successful full Premium commit/rollback is still unverified.
+- Premium-only entry points with no offline fallback. Legacy offline records and source are preserved separately from activation; a future addon is neither implemented nor approved.
 
 These safeguards are implementation details, not a guarantee against all attacks. Malware running as the same Windows user, a compromised operating system, browser or Minecraft process, and disclosure of process memory or private files remain outside the protection provided by local credential encryption.
 

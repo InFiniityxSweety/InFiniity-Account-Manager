@@ -1,14 +1,14 @@
 # Privacy Notice
 
-Last updated: October 31, 2026.
+Last updated: November 4, 2026.
 
-This notice describes the current private InFiniity Account Manager implementation. Minecraft AppID approval and real Premium end-to-end acceptance are pending. This repository provides public documentation only; it does not operate an account service.
+This notice describes the private Premium main mod, development build 1.0.4-dev.2. The original AppID application was declined without a stated reason; a real attempt on dev.1 failed at Minecraft Services with Invalid app registration. No revised approval or completed Premium acceptance is claimed. This repository provides documentation only and operates no account service.
 
 ## Information used by the mod
 
 For Microsoft-authenticated profiles, the mod processes the Minecraft player name, profile UUID, profile/skin information, account type, favorites, Microsoft refresh token, Minecraft Services access token, token expiry and the public application ID that issued the authorization. Short-lived Microsoft, Xbox and XSTS tokens and OAuth state/PKCE values are used during authentication. Microsoft passwords are entered only on Microsoft's sign-in pages and are not requested, received or stored by the mod.
 
-For local offline profiles, it stores the chosen name, derived offline UUID, profile type and favorites. Offline profiles are not Microsoft accounts and do not prove Minecraft ownership.
+Existing offline records from earlier combined versions retain their chosen name, derived offline UUID, profile type and favorites. The Premium main mod preserves them in the shared storage but does not display, create, activate or manage them. The earlier offline source is retained separately; a possible future addon is not implemented or enabled. Offline records carry no Microsoft refresh credentials and do not prove Minecraft ownership.
 
 ## Storage and protection
 
@@ -24,7 +24,7 @@ The mod has no maintainer-operated authentication backend, account synchronizati
 
 ## Retention and user control
 
-Saved profiles remain available until the user removes them or deletes the local data. Users can remove individual profiles in the mod. Removing a saved entry does not necessarily end an already active Minecraft session or revoke Microsoft's authorization. Users can manage or revoke application permissions through their Microsoft account, and should close Minecraft when ending use of an active session.
+Saved profiles remain available until the user removes them or deletes the local data. Users can remove saved Microsoft profiles in the Premium UI; retained offline records are not managed there. Removing a saved entry does not necessarily end an already active Minecraft session or revoke Microsoft's authorization. Users can manage or revoke application permissions through their Microsoft account, and should close Minecraft when ending use of an active session.
 
 Local backups, user-created copies, operating-system backups and caches may retain previous data. No claim of secure erasure is made. Do not publish account files, backups, crash dumps or logs without checking them for private data.
 
